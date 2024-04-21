@@ -1,15 +1,13 @@
 'use client'
 
-import { Button } from '@/components/ui/button'
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
-import { FileDown, FileUp, UploadIcon } from 'lucide-react'
 import React, { useState } from 'react'
-import OrderTableRow from './order-table-row'
-import { getAllProducts } from '../actions'
 import { CSVLink } from 'react-csv'
-import { Input } from '@/components/ui/input'
-import Dropzone, { useDropzone } from 'react-dropzone'
+import { FileDown, FileUp } from 'lucide-react'
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
 import { useToast } from '@/components/ui/use-toast'
+import { Button } from '@/components/ui/button'
+import { getAllProducts } from '../actions'
+import OrderTableRow from './order-table-row'
 import UploadFile from './upload-file'
 
 export default function OrderTable() {
