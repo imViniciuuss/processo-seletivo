@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Exports\ProductsExport;
 use App\Imports\ProductImport;
-use App\Imports\ProductsImport;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
@@ -48,7 +46,7 @@ class ProductsController extends Controller
     {
         try {
             $request->validate([
-                'file' => 'required|file|mimes:csv'
+                'file' => 'required|file'
             ]);
 
             $file = $request->file('file');
