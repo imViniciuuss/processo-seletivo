@@ -112,7 +112,7 @@ export default function UserLoginForm() {
             />
           </div>
           <Button type="submit" className="w-full">
-            Entrar
+            Join
           </Button>
         </form>
       </Form>

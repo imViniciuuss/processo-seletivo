@@ -23,14 +23,14 @@ export default function OrderTable() {
       setProducts(fetchProducts || [])
       setLoading(false)
       toast({
-        title: 'Sucesso!',
-        description: 'Você importou com sucesso os produtos!',
+        title: 'Success!',
+        description: 'products imported successfully!',
       })
 
     } catch (error) {
       toast({
         title: 'Error!',
-        description: 'Algo deu errado ao importar os produtos!',
+        description: 'Something went wrong during the import!',
       })
     }
   }
@@ -49,13 +49,13 @@ export default function OrderTable() {
         <TableHeader>
           <TableRow>
             <TableHead>ID</TableHead>
-            <TableHead>Título</TableHead>
-            <TableHead>Preço</TableHead>
+            <TableHead>Title</TableHead>
+            <TableHead>Price</TableHead>
             <TableHead>Description</TableHead>
-            <TableHead>Categoria</TableHead>
-            <TableHead>Imagem</TableHead>
+            <TableHead>Category</TableHead>
+            <TableHead>Image</TableHead>
             <TableHead>Rating</TableHead>
-            <TableHead>Quantidade</TableHead>
+            <TableHead>Quantity</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -72,7 +72,7 @@ export default function OrderTable() {
       {products.length > 0 && (
         <CSVLink className='flex items-center justify-center rounded bg-foreground w-[177px] text-background py-2 px-3 text-sm' data={products} filename={'productsExport.csv'}>
           <FileDown className='mr-3 w-4 h-4' />
-          Exportar produtos
+          Export products
         </CSVLink>
       )}
     </div>

@@ -1,10 +1,10 @@
 import { Button } from '@/components/ui/button'
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
 import { Input } from '@/components/ui/input'
 import { useToast } from '@/components/ui/use-toast'
 import { Upload } from 'lucide-react'
 import React, { useCallback, useState } from 'react'
-import Dropzone, { useDropzone } from 'react-dropzone'
+import { useDropzone } from 'react-dropzone'
 
 export default function UploadFile() {
   const [uploadedFileName, setUploadedFileName] = useState('');
@@ -12,8 +12,6 @@ export default function UploadFile() {
 
 
   const onDrop = useCallback(async(acceptedFiles: File[]) => {
-    console.log('loggin drop file', acceptedFiles)
-
     try {
       const formData = new FormData()
       formData.append('file', acceptedFiles[0])
@@ -25,14 +23,14 @@ export default function UploadFile() {
 
       if (res.ok) {
         toast({
-          title: 'Sucesso!',
-          description: 'Produtos CSV importados com sucesso!',
+          title: 'Success!',
+          description: 'CSV products imported successfully!',
         })
       } else {
         if (!res.ok) {
           toast({
             title: 'Error!',
-            description: 'Algo deu errado na importaçao!',
+            description: 'Something went wrong during the import!',
           })
         }
       }
@@ -40,7 +38,10 @@ export default function UploadFile() {
       setUploadedFileName(acceptedFiles[0].name)
 
     } catch (error) {
-      console.log(error)
+      toast({
+        title: 'Error!',
+        description: 'Something went wrong during the import!',
+      })
     }
   }, [])
 
@@ -57,14 +58,14 @@ export default function UploadFile() {
       <DialogTrigger asChild>
         <Button variant="outline">
           <Upload className='mr-3 w-4 h-4' />
-          Importar produtos CSV
+          Import products CSV
         </Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Faça upload do seu arquivo</DialogTitle>
+          <DialogTitle>Upload your file</DialogTitle>
           <DialogDescription>
-            Apenas é aceito arquivos .CSV para a importaçao!
+            Only .CSV files are accepted for import!
           </DialogDescription>
         </DialogHeader>
         <div className="grid grid-cols-2 gap-4" {...getRootProps()}>
@@ -80,11 +81,6 @@ export default function UploadFile() {
           </div>
 
         </div>
-
-
-        <DialogFooter>
-          <Button className='w-full' type="submit">Save changes</Button>
-        </DialogFooter>
       </DialogContent>
     </Dialog >
 
