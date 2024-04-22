@@ -41,7 +41,7 @@ export default function OrderTable() {
       <div className='flex gap-2'>
         <Button onClick={handleClick} disabled={loading}>
           <FileUp className='mr-2 h-4 w-4' />
-          Importar Produtos
+          Import Products
         </Button>
         <UploadFile />
       </div>
@@ -61,7 +61,7 @@ export default function OrderTable() {
         <TableBody>
           {products.length === 0 && (
             <TableRow>
-              <TableCell colSpan={8} className='w-full text-center'>Lista vazia!</TableCell>
+              <TableCell colSpan={8} className='w-full text-center'>Empty list!</TableCell>
             </TableRow>
           )}
           {products && (
