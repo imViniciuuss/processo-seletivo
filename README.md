@@ -85,6 +85,9 @@ Importação/Exportação de produtos em arquivos CSV + Autenticação JWT.
 
 - http://127.0.0.1:8000/api/products/import
     - Para importar os produtos de um arquivo CSV para o banco de dados.
+    - Os dados da planilha devem estar no seguinte formato:
+    - ![image](https://github.com/imViniciuuss/processo-seletivo/assets/84256848/66638dd9-b7e3-4797-b06f-7d91f26215b5)
+
 
 ## GET
 ----
@@ -103,6 +106,24 @@ Importação/Exportação de produtos em arquivos CSV + Autenticação JWT.
 - `./app/_components`: Contém os componentes privados da nossa aplicação. Componentes que serão reutilizados apenas em uma página/componente da aplicação.
 - `./app/auth`: Estruta da página de login e toda a lógica de autenticação.
 - `./services/auth`: Lógica completa para o processo de autenticação e autorização dos usuários com o Next Auth.
+
+## Fluxo de UI/UX
+
+## Login page
+![image](https://github.com/imViniciuuss/processo-seletivo/assets/84256848/73b3dd10-4000-4176-8ca5-c56a650a9d99)
+### Validação de dados
+![image](https://github.com/imViniciuuss/processo-seletivo/assets/84256848/fdd67537-719b-4d2a-ba54-ece03fba54ad)
+
+## Home page
+![image](https://github.com/imViniciuuss/processo-seletivo/assets/84256848/56311f3d-b562-4ed8-914e-2aeda02f62da)
+![image](https://github.com/imViniciuuss/processo-seletivo/assets/84256848/8cc0c5d5-41f4-4ce3-813d-e6ac9f1b2a16)
+### Upload de arquivo CSV
+![image](https://github.com/imViniciuuss/processo-seletivo/assets/84256848/52aad97a-87e7-40bc-a621-027a20eb72c1)
+
+
+
+
+
 
 
 
