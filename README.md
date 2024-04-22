@@ -1,3 +1,4 @@
+
 # Processo Seletivo
 
 Importação/Exportação de produtos em arquivos CSV + Autenticação JWT.
@@ -67,7 +68,34 @@ Importação/Exportação de produtos em arquivos CSV + Autenticação JWT.
 - `./app/Imports`: Facilita a importação de dados de produtos de um arquivo Excel para uma aplicação Laravel, utilizando o Laravel Excel para lidar com o processo de importação.
 - `./app/Exports`: Auxilia na exportação dos dados dos produtos um arquivo Excel.
 - `./database`: Contém os arquivos de migração e seed do banco de dados.
-- `./routes`: Contém todas as rotas da nossa aplicação e da API.
+
+#### Endpoints da API
+
+## POST
+----
+- http://127.0.0.1:8000/api/auth/login
+    - EMAIL: required
+    - PASSWORD: required
+    - Para realizar o login, use as credenciais:
+    - email: ssawayn@example.net
+    - password: senhateste123
+
+- http://127.0.0.1:8000/api/products/import/api
+    - Para importar os dados da API Fake para o banco de dados.
+
+- http://127.0.0.1:8000/api/products/import
+    - Para importar os produtos de um arquivo CSV para o banco de dados.
+
+## GET
+----
+- http://127.0.0.1:8000/api/products/export
+    - Para exportar todos os produtos do banco de dados para um arquivo CSV.
+
+- http://127.0.0.1:8000/api/products
+    - Para listar todos os produtos do banco de dados.
+
+
+
 
 #### Frontend
 - `./app`: Estrutura onde o Next usa para montar todo o sistema de roteamento e criação de novas páginas da aplicação.
@@ -75,3 +103,7 @@ Importação/Exportação de produtos em arquivos CSV + Autenticação JWT.
 - `./app/_components`: Contém os componentes privados da nossa aplicação. Componentes que serão reutilizados apenas em uma página/componente da aplicação.
 - `./app/auth`: Estruta da página de login e toda a lógica de autenticação.
 - `./services/auth`: Lógica completa para o processo de autenticação e autorização dos usuários com o Next Auth.
+
+
+
+
