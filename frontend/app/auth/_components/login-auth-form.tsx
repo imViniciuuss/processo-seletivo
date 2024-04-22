@@ -48,19 +48,19 @@ export default function UserLoginForm() {
       if (res?.error) {
         toast({
           title: 'Error!',
-          description: 'Credenciais invalidas.',
+          description: 'Invalid credentials.',
         })
       } else {
         router.push('/')
         toast({
           title: 'Success!',
-          description: 'Você logou com sucesso!',
+          description: 'You have successfully logged in!',
         })
       }
     } catch (error) {
       toast({
         title: 'Error!',
-        description: 'Algo deu errado.',
+        description: 'Something went wrong.',
       })
     }
   }
